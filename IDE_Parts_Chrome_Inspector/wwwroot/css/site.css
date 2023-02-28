@@ -1,0 +1,75 @@
+html, body {
+    font-size: 14px;
+    background-color: #181a1b;
+    color: white;
+    scrollbar-color: rgb(128, 128, 128);
+    margin-bottom: 30px;
+}
+
+a, .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.dark-form {
+    color: rgb(209, 205, 199);
+    background-color: rgb(24, 26, 27);
+    border-color: rgb(60, 65, 68);
+}
+
+/*========== Grid ============*/
+.grid-container_2columns {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+
+.grid-container_3columns {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-container_4columns {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.grid-container_5columns {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 5px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+    margin: 10px;
+}
+
+/*========== Scroll Bar ===========*/
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #555;
+}
+
+::-webkit-scrollbar-corner {
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(128, 128, 128);
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #0e0e10;
+    }
+
+
+/*=========== Dark Form ============*/
+.dark-form {
+    color: rgb(209, 205, 199);
+    background-color: rgb(24, 26, 27);
+    border-color: rgb(60, 65, 68);
+}

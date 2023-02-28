@@ -1,0 +1,34 @@
+﻿@model Product
+
+<style>
+    .dark-form {
+        color: rgb(209, 205, 199);
+        background-color: rgb(24, 26, 27);
+        border-color: rgb(60, 65, 68);
+    }
+</style>
+
+<div>
+    <h1 class="display-3">Create a New Product</h1>
+    <form asp-action="InsertProductToDatabase" asp-controller="Product" method="post">
+        <input asp-for="ProductID" type="hidden" value="" />
+        <label asp-for="Name" class="form-label my-2">Name</label>
+        <input type="text" name="Name" class="form-control dark-form" value="" />
+
+        <label asp-for="Price" class="form-label my-2">Price</label>
+        <input type="number" step="0.01" name="Price" class="form-control dark-form" />
+
+        <div class="form-group my-2">
+            <label for="">Select a Category</label>
+            <select class="form-control dark-form" name="CategoryID" value="">
+                @foreach (var cat in Model.Categories)
+                {
+                    <option value="@cat.CategoryID" class="dark-form">@cat.CategoryID @cat.Name</option>
+                }
+            </select>
+        </div>
+
+        <br />
+        <input type="submit" value="Create Product" class="btn btn-primary" />
+    </form>
+</div>
